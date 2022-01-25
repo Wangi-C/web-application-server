@@ -14,9 +14,8 @@ public class HttpRequestUtils {
 	private static final Logger log = LoggerFactory.getLogger(HttpRequestUtils.class);
 	
 	public static String getUrl(String firstLine) {
-		log.debug("OriginalPath : {}", firstLine);
-		String[] splited = firstLine.split("/");
-		String path = splited[2];
+		String[] spliedLine = firstLine.split(" ");
+		String path = spliedLine[1];
         log.debug("path : {}", path);
         
         return path;
